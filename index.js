@@ -421,12 +421,101 @@ con.connect(function(err) {
 });*/
 
 
-con.connect(function(err) {
+
+/*con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
-  var sql = "ALTER TABLE ORDERS ";
+  var sql = "CREATE TABLE ORDERS (order_id INT PRIMARY KEY AUTO_INCREMENT,order_status VARCHAR(20),total_amt INT, dist_id INT, FOREIGN KEY (dist_id) REFERENCES DISTRIBUTOR(distributor_id))";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table created");
+  });
+});*/
+
+
+
+/*con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "ALTER TABLE ORDERS ADD FOREIGN KEY (dist_id)REFERENCES DISTRIBUTOR (distributor_id)ON DELETE CASCADE ";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log("Table altered");
   });
-});
+});*/
+
+
+/*con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "ALTER TABLE TO_MAKE ADD FOREIGN KEY (mat_id)REFERENCES RAW_MATERIALS(material_id)ON DELETE CASCADE ";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table altered");
+  });
+});*/
+
+
+/*con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "ALTER TABLE TO_MAKE ADD FOREIGN KEY (prod_id)REFERENCES PRODUCT(product_id)ON DELETE CASCADE ";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table altered");
+  });
+});*/
+
+
+/*con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "ALTER TABLE MAKES ADD FOREIGN KEY (emply_id)REFERENCES EMPLOYEE(emp_id)ON DELETE CASCADE ";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table altered");
+  });
+});*/
+
+
+/*con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "ALTER TABLE MAKES ADD FOREIGN KEY (prod_id)REFERENCES PRODUCT(product_id)ON DELETE CASCADE ";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table altered");
+  });
+});*/
+
+
+/*con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "ALTER TABLE PLACED_FOR ADD FOREIGN KEY (prod_id)REFERENCES PRODUCT(product_id)ON DELETE CASCADE ";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table altered");
+  });
+});*/
+
+
+/*con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "ALTER TABLE PLACED_FOR ADD FOREIGN KEY (order_id)REFERENCES ORDERS(order_id)ON DELETE CASCADE ";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table altered");
+  });
+});*/
+
+
+
+/*con.connect(function(err) {
+  if (err) throw err;
+  con.query("SHOW CREATE TABLE ORDERS", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+  });
+});*/
