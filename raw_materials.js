@@ -1,12 +1,12 @@
-var mysql = require('mysql');
+import { con } from "../db/db.js"
+import express from 'express';
+var router = express.Router()
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Money_heist1",
-  database:"mydb"
-  
-});
+router.use('/', () => {
+  console.log('In /order file')
+})
+
+export default router;
 /*con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
@@ -147,6 +147,27 @@ var con = mysql.createConnection({
   /*con.connect(function(err) {
     if (err) throw err;
     con.query("SELECT * FROM RAW_MATERIALS WHERE manufacturer = 'xyz' ", function (err, result) {
+      if (err) throw err;
+      console.log(result);
+    });
+  });*/
+
+
+  //SEARCH BY NAME
+
+/*con.connect(function(err) {
+    if (err) throw err;
+    con.query("SELECT * FROM RAW_MATERIALS WHERE material_name='abc'", function (err, result) {
+      if (err) throw err;
+      console.log(result);
+    });
+  });*/
+
+/* SEARCH BY MANUFACTURER
+
+con.connect(function(err) {
+    if (err) throw err;
+    con.query("SELECT * FROM RAW_MATERIAL WHERE manufacturer='xyz'", function (err, result) {
       if (err) throw err;
       console.log(result);
     });

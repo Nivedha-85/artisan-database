@@ -1,13 +1,12 @@
-var mysql = require('mysql');
+import { con } from "../db/db.js"
+import express from 'express';
+var router = express.Router()
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Money_heist1",
-  database:"mydb"
-  
-});
+router.use('/', () => {
+  console.log('In /order file')
+})
 
+export default router;
 
 /*con.connect(function(err) {
     if (err) throw err;
