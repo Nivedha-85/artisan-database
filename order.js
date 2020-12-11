@@ -103,3 +103,13 @@ export default router;
     console.log(result);
   });
 });*/
+
+
+/*con.connect(function(err) {
+  if (err) throw err;
+  var sql = "SELECT distributor_name AS DistributorName ,ORDERS .* FROM ORDERS JOIN DISTRIBUTOR ON ORDERS.order_id = DISTRIBUTOR.present_order";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+});*/

@@ -1,12 +1,12 @@
-var mysql = require('mysql');
+import { con } from "../db/db.js"
+import express from 'express';
+var router = express.Router()
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Money_heist1",
-  database:"mydb"
-  
-});
+router.use('/', () => {
+  console.log('In /order file')
+})
+
+export default router;
 
 /*con.connect(function(err) {
     if (err) throw err;
@@ -124,3 +124,13 @@ var con = mysql.createConnection({
       console.log(result);
     });
   });*/
+
+
+  /*con.connect(function(err) {
+    if (err) throw err;
+    var sql = "SELECT product_name AS ProductName ,prod_count AS QuantityMade FROM make JOIN EMPLOYEE ON EMPLOYEE.emp_id = make.emply_id JOIN PRODUCT ON make.prods_id = PRODUCT.product_id ";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log(result);
+    });
+  }); */

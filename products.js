@@ -116,3 +116,33 @@ export default router;
     });
   });*/
   
+
+
+  /*con.connect(function(err) {
+    if (err) throw err;
+    var sql = "SELECT material_name AS MaterialName ,mat_count AS QuantityRequired FROM to_make JOIN RAW_MATERIALS ON RAW_MATERIALS.material_id = to_make.mat_id JOIN PRODUCT ON to_make.prod_id = PRODUCT.product_id ";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log(result);
+    });
+  });*/
+
+
+
+
+
+
+
+
+
+  
+  /*
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "SELECT DISTINCT material_name AS MaterialName, mat_count AS QuantityRequired FROM TO_MAKE JOIN PRODUCT ON TO_MAKE.prod_id = 1 JOIN RAW_MATERIAL ON RAW_MATERIAL.material_id = TO_MAKE.mat_id  ";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+});
+*/

@@ -1,12 +1,12 @@
-var mysql = require('mysql');
+import { con } from "../db/db.js"
+import express from 'express';
+var router = express.Router()
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Money_heist1",
-  database:"mydb"
-  
-});
+router.use('/', () => {
+  console.log('In /distributor file')
+})
+
+export default router;
 
 /*con.connect(function(err) {
     if (err) throw err;
@@ -32,7 +32,7 @@ var con = mysql.createConnection({
   /*con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "INSERT INTO DISTRIBUTOR(distributor_name,contact_no ,present_order) VALUES ('aash','9902299573',1) ";
+    var sql = "INSERT INTO DISTRIBUTOR(distributor_name,contact_no ,present_order) VALUES ('aash','9902299573',2) ";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log("INSERTED");
@@ -41,7 +41,7 @@ var con = mysql.createConnection({
 
   /*con.connect(function(err) {
     if (err) throw err;
-    var sql = "DELETE FROM DISTRIBUTOR WHERE distributor_id = 2";
+    var sql = "DELETE FROM DISTRIBUTOR WHERE distributor_name = 2";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log("Number of records deleted: " + result.affectedRows);
@@ -101,5 +101,16 @@ var con = mysql.createConnection({
     con.query("SELECT * FROM DISTRIBUTOR WHERE distributor_name = 'Cheeta' ", function (err, result) {
       if (err) throw err;
       console.log(result);
+    });
+  });*/
+
+
+
+  /*con.connect(function(err) {
+    if (err) throw err;
+    var sql = "DROP TABLE DISTRIBUTOR ";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("Table deleted");
     });
   });*/
