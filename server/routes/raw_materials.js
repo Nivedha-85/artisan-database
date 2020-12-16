@@ -3,7 +3,7 @@ import express from 'express';
 var router = express.Router()
 
 router.use('/', () => {
-  console.log('In /order file')
+  console.log('In /raw material file')
 })
 
 export default router;

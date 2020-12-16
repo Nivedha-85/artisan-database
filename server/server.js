@@ -32,18 +32,19 @@ app.use(function(req,res,next) {
 });
 
 //creating a http server on PORT
-//server.listen(PORT,'127.0.0.0',() => console.log(`Server has started on PORT ${PORT}`))
+server.listen(PORT,'127.0.0.0',() => console.log(`Server has started on PORT ${PORT}`))
 
 
 //check if the server is up and running
 app.get('/',(req,res) => {
   console.log("artisan ")
   res.send("Server is up")
+  
 })
 
 //REGISTERING ROUTES
-app.use('/distributor', distributor)
-app.use('/order',order)
+app.use('/distributor', distributor) // CRUD
+app.use('/order',order) // 
 app.use('/raw_materials',raw_materials)
 app.use('/employee',employee)
 app.use('/joined',joined)
